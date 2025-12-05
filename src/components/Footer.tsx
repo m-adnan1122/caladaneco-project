@@ -47,7 +47,7 @@ const SocialMedia = () => {
 
   return (
     <>
-      <div className="flex my-8 space-x-8">
+      <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 my-8">
         {socialMediaIcons.map((data, index) => (
           <React.Fragment key={`social-media-icon-item-${index}`}>
             <a href={data.link}>
@@ -160,26 +160,29 @@ const Papers = () => {
 
 export function Footer() {
   return (
-    <div className="relative bottom-0 w-full">
-      <div className="flex justify-between mx-20 mt-40">
-        <div className="flex flex-col justify-center">
-          <a className="w-full h-full" href="https://lumanagi.com">
-            <img src={WhiteLogo} alt="logo" className="max-w-full w-72" />
-          </a>
-          <SocialMedia />
+    <div className="relative bottom-0 w-full" style={{ overflowX: 'hidden' }}>
+      <div className="w-full px-4 sm:px-8 md:px-20">
+        <div className="flex flex-col md:flex-row md:justify-between mt-20 md:mt-40 gap-8 md:gap-0">
+          <div className="flex flex-col justify-center">
+            <a className="w-full h-full" href="https://lumanagi.com">
+              <img src={WhiteLogo} alt="logo" className="max-w-full w-48 sm:w-56 md:w-72" />
+            </a>
+            <SocialMedia />
+          </div>
+          <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-12 md:space-x-20">
+            <Papers />
+          </div>
         </div>
-        <div className="flex space-x-20">
-          <Papers />
-        </div>
-      </div>
-      <hr className="mx-20 mt-8 mb-4 text-white"></hr>
-      <div className="flex w-full mb-10">
-        <div className="flex justify-center w-full text-lg text-white">
-          <a className="opacity-50" href="https://lumanagi.com">
+        <hr className="mt-8 mb-4 text-white" />
+        <div className="flex flex-col sm:flex-row justify-center w-full mb-10 gap-2 sm:gap-4 text-white">
+          <a className="opacity-50 text-center" href="https://lumanagi.com">
             © Lumanagi
           </a>
-          <div className="ml-2">
-            <span className="opacity-50">HU</span> EN
+          <div className="flex justify-center">
+            <span className="opacity-50">HU</span>
+            <div className="ml-2">
+              <span className="opacity-50">EN</span>
+            </div>
           </div>
         </div>
       </div>

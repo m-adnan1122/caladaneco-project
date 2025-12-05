@@ -4,6 +4,8 @@
 @layer base {
   body {
     font-family: Inter;
+     overflow-x: hidden; 
+ 
   }
 
   #dashboard {
@@ -11,6 +13,7 @@
       url("./assets/images//lumangi-cover.png");
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
+    
   }
 
   .card-data::-webkit-scrollbar {

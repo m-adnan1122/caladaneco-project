@@ -11,7 +11,10 @@ import PublicRoutes from "./helper/PublicRoutes.tsx";
 import PrivateRoutes from "./helper/PrivateRoutes";
 import Profile from "./profile/Profile";
 import EditProfile from "./profile/EditProfile";
-
+import Voting from "../views/Voting";
+import Forum from "../views/Forum";
+import Coindetail from "../views/Coindetail";
+import Auction from "../views/Auction";
 const Layout = () => {
   return (
     <>
@@ -26,42 +29,42 @@ export function Routers() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/prediction" element={<Dashboard />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
 
         <Route
-          path="/reset-password"
+          path="/Voting"
           element={
             <PublicRoutes>
-              <ResetPassword />
+              <Voting />
             </PublicRoutes>
           }
         />
         <Route
-          path="/google/login"
+          path="/Forum"
           element={
-            <PrivateRoutes>
-              <GoogleLogin />
-            </PrivateRoutes>
+            
+              <Forum />
+            
           }
         />
         <Route
-          path="/profile"
+          path="/Coindetail"
           element={
-            <PrivateRoutes>
-              <Profile />
-            </PrivateRoutes>
+            
+              <Coindetail />
+            
           }
         />
         <Route
-          path="/edit-profile"
+          path="/Auction"
           element={
-            <PrivateRoutes>
-              <EditProfile />
-            </PrivateRoutes>
+            
+              <Auction />
+            
           }
         />
         <Route path="/google/redirect" element={<GoogleRedirect />} />
-        <Route path="/" element={<Navigate to="/prediction" />} />
+        <Route path="/" element={<Navigate to="/Dashboardl" />} />
       </Route>
     </Routes>
   );
