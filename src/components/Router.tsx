@@ -64,7 +64,7 @@ export function Routers() {
           }
         />
         <Route path="/google/redirect" element={<GoogleRedirect />} />
-        <Route path="/" element={<Navigate to="/Dashboardl" />} />
+        <Route path="/" element={<Navigate to="/Dashboard" />} />
       </Route>
     </Routes>
   );
